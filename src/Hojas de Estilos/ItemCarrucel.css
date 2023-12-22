@@ -1,0 +1,111 @@
+.item-carrucel{
+    background-image: url('../Imagenes//fondo-item-carrucel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 32rem;
+    width: 16rem;
+    transition: .7s all ease-out;
+    position: absolute;
+    transform: translate(0, 0) scale(0.4); 
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-carrucel-titulo{
+    color: #292522;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+.item-carrucel-texto{
+    color: #292522;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.item-carrucel-actual,.item-carrucel-siguiente,.item-carrucel-anterior{
+    border-radius: 20px;
+    padding: 10px; 
+    visibility: visible;
+}
+.item-carrucel-actual,.item-carrucel-siguiente,.item-carrucel-anterior{
+    transform: translate(0, 0) scale(1); 
+}
+.item-carrucel-actual{
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(0,0,0,.7);
+}
+
+.item-carrucel-siguiente{
+   transform:rotateY(45deg) translate(150px, 0) scale(0.7); 
+   z-index: 9;
+}
+.item-carrucel-anterior{
+    transform:rotateY(-45deg) translate(-150px) scale(0.7);
+    z-index: 9;
+}
+/*Media Queries*/
+@media (min-width: 480px) {
+    .item-carrucel{
+        height: 40rem;
+        width: 20rem;
+    }
+    .item-carrucel-titulo{
+        font-size: 28px;
+    }
+    .item-carrucel-texto{
+        font-size: 22px;
+    }
+    .item-carrucel-siguiente{
+        transform:rotateY(45deg) translate(250px, 0) scale(0.7); 
+        z-index: 9;
+     }
+     .item-carrucel-anterior{
+         transform:rotateY(-45deg) translate(-250px) scale(0.7);
+         z-index: 9;
+     }
+}
+@media (min-width: 768px) {
+    .item-carrucel{
+        height: 44rem;
+        width: 22rem;
+    }
+    .item-carrucel-titulo{
+        font-size: 30px;
+    }
+    .item-carrucel-texto{
+        font-size: 25px;
+    }
+    .item-carrucel-siguiente{
+        transform:rotateY(45deg) translate(300px, 0) scale(0.7); 
+        z-index: 9;
+     }
+     .item-carrucel-anterior{
+         transform:rotateY(-45deg) translate(-300px) scale(0.7);
+         z-index: 9;
+     }
+}
+@media (min-width: 1024px) {
+    .item-carrucel{
+        height: 30rem;
+        width: 15rem;
+    }
+    .item-carrucel-titulo{
+        font-size: 20px;
+    }
+    .item-carrucel-texto{
+        font-size: 16px;
+    }
+    .item-carrucel-siguiente{
+        transform:rotateY(45deg) translate(250px, 0) scale(0.7); 
+        z-index: 9;
+     }
+     .item-carrucel-anterior{
+         transform:rotateY(-45deg) translate(-250px) scale(0.7);
+        
+}
+}
