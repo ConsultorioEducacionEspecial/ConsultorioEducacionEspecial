@@ -59,7 +59,7 @@ function Carrucel(){
         }, 10000);
     
         return () => clearInterval(intervalId); 
-      }, [cardActual]);
+      }, [cardActual, siguienteCard]);
     return(
         <>
             <div className="carrucel">
