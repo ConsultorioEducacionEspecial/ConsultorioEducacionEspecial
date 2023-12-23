@@ -33,24 +33,28 @@ function Carrucel(){
     const [cardActual , setcardActual]  = useState(1);
     const [cardAnterior , setcardAnterior] = useState(0);
     const [cardSiguiente , setcardSiguiente] = useState(2);
+    
     const siguienteCard = useCallback(() => {
         setcardAnterior(cardActual);
         setcardActual(cardSiguiente);
         if (cardSiguiente + 1 < Experiencias.length) {
             setcardSiguiente(cardSiguiente + 1);
         } else {
-            setcardSiguiente(0);
+            setcardSiguiente(0)
         }
-    }, [cardActual, cardSiguiente]);
-    const anteriorCard = ()=>{
+    }, [cardActual, cardSiguiente, Experiencias.length]);
+    
+    const anteriorCard = useCallback(() => {
         setcardSiguiente(cardActual);
         setcardActual(cardAnterior);
-        if(cardAnterior - 1 > -1){
-            setcardAnterior(cardAnterior-1);
-        }else{
-            setcardAnterior(Experiencias.length-1); 
+        if (cardAnterior - 1 > -1) {
+            setcardAnterior(cardAnterior - 1);
+        } else {
+            setcardAnterior(Experiencias.length - 1);
         }
-    }
+    }, [cardActual, cardAnterior, Experiencias.length]);
+    
+    
     // eslint-disable-next-line
     useEffect(() => {
         const intervalId = setInterval(() => {
