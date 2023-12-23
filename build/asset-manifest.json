@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/consultorioeducacionespecial/build/static/css/main.0208f33f.css",
-    "main.js": "/consultorioeducacionespecial/build/static/js/main.e1b38d24.js",
+    "main.js": "/consultorioeducacionespecial/build/static/js/main.3592483a.js",
     "static/media/imagen-fondo.jpg": "/consultorioeducacionespecial/build/static/media/imagen-fondo.44958a17a55ad150a300.jpg",
     "static/media/fondo-contacto.jpg": "/consultorioeducacionespecial/build/static/media/fondo-contacto.e8a26318554b8a43c56e.jpg",
     "index.html": "/consultorioeducacionespecial/build/index.html",
     "main.0208f33f.css.map": "/consultorioeducacionespecial/build/static/css/main.0208f33f.css.map",
-    "main.e1b38d24.js.map": "/consultorioeducacionespecial/build/static/js/main.e1b38d24.js.map"
+    "main.3592483a.js.map": "/consultorioeducacionespecial/build/static/js/main.3592483a.js.map"
   },
   "entrypoints": [
     "static/css/main.0208f33f.css",
-    "static/js/main.e1b38d24.js"
+    "static/js/main.3592483a.js"
   ]
 }
