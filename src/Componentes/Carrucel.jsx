@@ -52,6 +52,7 @@ function Carrucel(){
             setcardAnterior(Experiencias.length-1); 
         }
     }
+    // eslint-disable-next-line
     useEffect(() => {
         const intervalId = setInterval(() => {
           siguienteCard();
