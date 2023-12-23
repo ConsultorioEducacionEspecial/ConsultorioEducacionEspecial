@@ -1,4 +1,4 @@
-import {React , useState , useEffect}from "react";
+import {React , useState , useEffect, useCallback}from "react";
 import '../Hojas de Estilos/Carrucel.css'
 import ItemCarrucel from "./ItemCarrucel";
 function Carrucel(){
@@ -33,16 +33,15 @@ function Carrucel(){
     const [cardActual , setcardActual]  = useState(1);
     const [cardAnterior , setcardAnterior] = useState(0);
     const [cardSiguiente , setcardSiguiente] = useState(2);
-    const siguienteCard = ()=>{
+    const siguienteCard = useCallback(() => {
         setcardAnterior(cardActual);
         setcardActual(cardSiguiente);
-        if(cardSiguiente + 1 < Experiencias.length){
-            setcardSiguiente(cardSiguiente+1);
-        }else{
-            setcardSiguiente(0)
+        if (cardSiguiente + 1 < Experiencias.length) {
+            setcardSiguiente(cardSiguiente + 1);
+        } else {
+            setcardSiguiente(0);
         }
-
-    }
+    }, [cardActual, cardSiguiente]);
     const anteriorCard = ()=>{
         setcardSiguiente(cardActual);
         setcardActual(cardAnterior);
